@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="1.0.0">
+        <id>VB_AppFramework</id>
+        <version>1.0.1</version>
+        <title>VisualBasic App Framework</title>
+        <authors>xieguigang</authors>
+        <owners>xie.guigang@live.com</owners>
+        <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+        <projectUrl>https://github.com/xieguigang/VisualBasic_AppFramework</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Source code can be download from github.com:
+https://github.com/xieguigang/VisualBasic_AppFramework</description>
+        <summary>Required of .NET framework 4.6. and x64 program.
+This package library enrichment the programming capability and language features of VisualBasic language</summary>
+        <releaseNotes>some module is not ready yet, not recommended this version</releaseNotes>
+        <copyright>xie.guigang@gcmodeller.org</copyright>
+        <tags>VB.NET</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="Microsoft.VisualBasic" targetFramework=".NETFramework4.6" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" />
+        <file src="Microsoft.VisualBasic.DataMining.Framework.dll" target="Microsoft.VisualBasic.DataMining.Framework.dll" />
+        <file src="Microsoft.VisualBasic.DataMining.Framework.pdb" target="Microsoft.VisualBasic.DataMining.Framework.pdb" />
+        <file src="Microsoft.VisualBasic.DataMining.Framework.xml" target="Microsoft.VisualBasic.DataMining.Framework.xml" />
+        <file src="Microsoft.VisualBasic.DataVisualization.Network.dll" target="Microsoft.VisualBasic.DataVisualization.Network.dll" />
+        <file src="Microsoft.VisualBasic.DataVisualization.Network.pdb" target="Microsoft.VisualBasic.DataVisualization.Network.pdb" />
+        <file src="Microsoft.VisualBasic.DataVisualization.Network.xml" target="Microsoft.VisualBasic.DataVisualization.Network.xml" />
+        <file src="Microsoft.VisualBasic.DocumentFormat.Csv.dll" target="Microsoft.VisualBasic.DocumentFormat.Csv.dll" />
+        <file src="Microsoft.VisualBasic.DocumentFormat.Csv.pdb" target="Microsoft.VisualBasic.DocumentFormat.Csv.pdb" />
+        <file src="Microsoft.VisualBasic.DocumentFormat.Csv.xml" target="Microsoft.VisualBasic.DocumentFormat.Csv.xml" />
+        <file src="Microsoft.VisualBasic.Mathematical.dll" target="Microsoft.VisualBasic.Mathematical.dll" />
+        <file src="Microsoft.VisualBasic.Mathematical.dll.config" target="Microsoft.VisualBasic.Mathematical.dll.config" />
+        <file src="Microsoft.VisualBasic.Mathematical.pdb" target="Microsoft.VisualBasic.Mathematical.pdb" />
+        <file src="Microsoft.VisualBasic.Mathematical.xml" target="Microsoft.VisualBasic.Mathematical.xml" />
+    </files>
+</package>
