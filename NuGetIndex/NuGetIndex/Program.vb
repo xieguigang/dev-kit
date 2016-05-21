@@ -16,14 +16,38 @@ Module Program
         Return md.SaveTo(out).CLICode
     End Function
 
-    <ExportAPI("/index", Usage:="/index /source <inDIR>")>
+    <ExportAPI("/index", Usage:="/index /source <inDIR> [/github <url>]")>
     Public Function Index(args As CommandLine) As Integer
         Dim files As IEnumerable(Of String) =
             ls - l - r - wildcards("*.nuspec") <= args("/source")
         Call App.SelfFolks(files.ToArray, 4)
 
-        Dim sb As New StringBuilder("#Index")
+        Dim sb As New StringBuilder()
         Call sb.AppendLine("My nuget published packages meta data backup database.")
+
+        Dim LQuery = From path As String
+                     In files
+                     Let name As String = path.BaseName
+                     Let DIR As String = path.ParentPath
+                     Select name,
+                         DIR,
+                         path
+                     Group By DIR Into Group
+
+        Call sb.AppendLine("#Index")
+
+        For Each package In LQuery
+            Dim name As String = package.DIR.BaseName
+
+            Call sb.AppendLine("##" & name)
+
+            For Each ver In package.Group
+                Call sb.AppendLine(">" & ver.name)
+            Next
+
+            Call sb.AppendLine()
+        Next
+
         Return sb.SaveTo(args("/source") & "/README.md")
     End Function
 End Module
