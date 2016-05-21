@@ -36,7 +36,7 @@ Module Program
             github &= "/tree/master/nuget/"
         End If
 
-        Dim sb As New StringBuilder()
+        Dim sb As New StringBuilder("#nuget-backup" & vbCrLf)
         Call sb.AppendLine("My nuget published packages meta data backup database.")
 
         Dim LQuery = From path As String
@@ -48,7 +48,7 @@ Module Program
                          path
                      Group By DIR Into Group
 
-        Call sb.AppendLine("#Index")
+        Call sb.AppendLine("#__--==Index==--__")
 
         For Each package In LQuery
             Dim name As String = package.DIR.BaseName
