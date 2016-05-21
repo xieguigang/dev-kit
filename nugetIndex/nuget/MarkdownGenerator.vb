@@ -17,7 +17,7 @@ Module MarkdownGenerator
         Call sb.AppendLine("License: " & nuspec.metadata.licenseUrl)
         Call sb.AppendLine()
         Call sb.AppendLine($"To install **[{nuspec.metadata.title}]({String.Format(nuget, nuspec.metadata.id)})**, run the following command in the Package Manager Console:")
-        Call sb.AppendLine($"> PM>  ++Install-Package {nuspec.metadata.id}++")
+        Call sb.AppendLine($"> PM>  **Install-Package {nuspec.metadata.id}**")
         Call sb.AppendLine()
         Call sb.AppendLine()
         Call sb.AppendLine("##Summary")
@@ -36,7 +36,8 @@ Module MarkdownGenerator
         Call sb.AppendLine(nuspec.metadata.tags)
         Call sb.AppendLine("##Dependencies")
         Call sb.AppendLine(">" & nuspec.metadata.frameworkAssemblies.GetJson)
-
+        Call sb.AppendLine()
+        Call sb.AppendLine()
         Call sb.AppendLine("##File includes")
 
         For Each file In nuspec.files

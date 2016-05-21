@@ -6,7 +6,7 @@ Project URL: https://github.com/SMRUCC/ncbi-localblast
 License: http://www.gnu.org/licenses/gpl.html
 
 To install **[NCBI localblast wrapper library](https://www.nuget.org/packages/NCBI_localblast/)**, run the following command in the Package Manager Console:
-> PM>  ++Install-Package NCBI_localblast++
+> PM>  **Install-Package NCBI_localblast**
 
 
 ##Summary
@@ -27,6 +27,8 @@ xie.guigang@gcmodeller.org
 VB.NET .NET4.6 x64
 ##Dependencies
 >[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+
+
 ##File includes
 > ..\localblast\Tools\bin\x64\Publish\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.dll<br />
 > ..\localblast\Tools\bin\x64\Publish\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.pdb<br />

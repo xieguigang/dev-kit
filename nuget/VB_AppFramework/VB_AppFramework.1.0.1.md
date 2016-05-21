@@ -6,7 +6,7 @@ Project URL: https://github.com/xieguigang/VisualBasic_AppFramework
 License: http://www.gnu.org/licenses/gpl-3.0.html
 
 To install **[VisualBasic App Framework](https://www.nuget.org/packages/VB_AppFramework/)**, run the following command in the Package Manager Console:
-> PM>  ++Install-Package VB_AppFramework++
+> PM>  **Install-Package VB_AppFramework**
 
 
 ##Summary
@@ -27,6 +27,8 @@ xie.guigang@gcmodeller.org
 VB.NET
 ##Dependencies
 >[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+
+
 ##File includes
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll<br />
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb<br />
