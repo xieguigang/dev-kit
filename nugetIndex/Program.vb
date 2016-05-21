@@ -57,9 +57,9 @@ Module Program
 
             For Each ver In package.Group
                 If configLink Then
-                    Call sb.AppendLine($">[{ver.name}]({github}/{ver.path.ParentDirName}/{ver.name}.md)")
+                    Call sb.AppendLine($">[{ver.name}]({github}/{ver.path.ParentDirName}/{ver.name}.md)<br />")
                 Else
-                    Call sb.AppendLine(">" & ver.name)
+                    Call sb.AppendLine(">" & ver.name & "<br />")
                 End If
             Next
 

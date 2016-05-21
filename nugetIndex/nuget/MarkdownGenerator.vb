@@ -11,7 +11,9 @@ Module MarkdownGenerator
         Dim sb As New StringBuilder($"#{nuspec.metadata.title}" & vbCrLf)
 
         Call sb.AppendLine("Version: **" & nuspec.metadata.version & "**")
+        Call sb.AppendLine()
         Call sb.AppendLine("Project URL: " & nuspec.metadata.projectUrl)
+        Call sb.AppendLine()
         Call sb.AppendLine("License: " & nuspec.metadata.licenseUrl)
         Call sb.AppendLine()
         Call sb.AppendLine($"To install **[{nuspec.metadata.title}]({String.Format(nuget, nuspec.metadata.id)})**, run the following command in the Package Manager Console:")
@@ -20,6 +22,7 @@ Module MarkdownGenerator
         Call sb.AppendLine()
         Call sb.AppendLine("##Summary")
         Call sb.AppendLine(nuspec.metadata.summary)
+        Call sb.AppendLine()
         Call sb.AppendLine(nuspec.metadata.description)
         Call sb.AppendLine("##Release Notes")
         Call sb.AppendLine(nuspec.metadata.releaseNotes)
@@ -32,7 +35,7 @@ Module MarkdownGenerator
         Call sb.AppendLine("##Tags")
         Call sb.AppendLine(nuspec.metadata.tags)
         Call sb.AppendLine("##Dependencies")
-        Call sb.AppendLine(nuspec.metadata.frameworkAssemblies.GetJson)
+        Call sb.AppendLine(">" & nuspec.metadata.frameworkAssemblies.GetJson)
 
         Call sb.AppendLine("##File includes")
 

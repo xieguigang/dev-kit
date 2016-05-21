@@ -1,6 +1,8 @@
 #GCModeller base core modules
 Version: **1.0.0**
+
 Project URL: https://github.com/SMRUCC/GCModeller.Core
+
 License: http://www.gnu.org/licenses/gpl-3.0.html
 
 To install **[GCModeller base core modules](https://www.nuget.org/packages/GCModeller.Core/)**, run the following command in the Package Manager Console:
@@ -9,6 +11,7 @@ To install **[GCModeller base core modules](https://www.nuget.org/packages/GCMod
 
 ##Summary
 This library contains some common object model in the bioinformatics and database reader.
+
 The common database reader includes:
 NCBI genbank reader
 NCBI gff/PTT feature sites document reader
@@ -28,7 +31,7 @@ xie.guigang@gcmodeller.org
 ##Tags
 VB.NET .NET
 ##Dependencies
-[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+>[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
 ##File includes
 > LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.dll<br />
 > LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.pdb<br />
