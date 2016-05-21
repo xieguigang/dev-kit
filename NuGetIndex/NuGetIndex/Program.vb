@@ -16,11 +16,25 @@ Module Program
         Return md.SaveTo(out).CLICode
     End Function
 
-    <ExportAPI("/index", Usage:="/index /source <inDIR> [/github <url>]")>
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="args"></param>
+    ''' <returns></returns>
+    <ExportAPI("/index",
+               Usage:="/index /source <inDIR> [/github <url>]")>
+    <ParameterInfo("/github", True,
+                   Usage:="",
+                   Example:="https://github.com/xieguigang/nuget-backup")>
     Public Function Index(args As CommandLine) As Integer
+        Dim github As String = args("/github")
+        Dim configLink As Boolean = Not String.IsNullOrEmpty(github)
         Dim files As IEnumerable(Of String) =
             ls - l - r - wildcards("*.nuspec") <= args("/source")
-        Call App.SelfFolks(files.ToArray, 4)
+
+        If configLink Then
+            github &= "/tree/master/nuget/"
+        End If
 
         Dim sb As New StringBuilder()
         Call sb.AppendLine("My nuget published packages meta data backup database.")
@@ -42,12 +56,19 @@ Module Program
             Call sb.AppendLine("##" & name)
 
             For Each ver In package.Group
-                Call sb.AppendLine(">" & ver.name)
+                If configLink Then
+                    Call sb.AppendLine($">[{ver.name}]({github}/{ver.path.ParentDirName}/{ver.name}.md)")
+                Else
+                    Call sb.AppendLine(">" & ver.name)
+                End If
             Next
 
             Call sb.AppendLine()
         Next
 
-        Return sb.SaveTo(args("/source") & "/README.md")
+        Call sb.SaveTo(args("/source") & "/README.md")
+        Call App.SelfFolks(files.ToArray, 4)
+
+        Return 0
     End Function
 End Module
