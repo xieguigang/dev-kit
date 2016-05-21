@@ -4,11 +4,11 @@
 Public Class Nuspec
 
     Public Property metadata As metadata
-    Public Property files As FileAttribute()
+    Public Property files As file()
 
 End Class
 
-Public Class FileAttribute
+Public Class file
     <XmlAttribute> Public Property src As String
     <XmlAttribute> Public Property target As String
 End Class
@@ -33,6 +33,6 @@ Public Class metadata
 End Class
 
 Public Class frameworkAssembly
-    Public Property assemblyName As String
-    Public Property targetFramework As String
+    <XmlAttribute> Public Property assemblyName As String
+    <XmlAttribute> Public Property targetFramework As String
 End Class
