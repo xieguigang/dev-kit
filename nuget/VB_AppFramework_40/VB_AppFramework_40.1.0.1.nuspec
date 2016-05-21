@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="1.0.0">
+        <id>VB_AppFramework_40</id>
+        <version>1.0.1</version>
+        <title>VisualBasic App Framework for .NET 4.0</title>
+        <authors>xieguigang</authors>
+        <owners>xie.guigang@live.com</owners>
+        <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+        <projectUrl>https://github.com/xieguigang/VisualBasic_AppFramework</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>This library enriched the language features of VisualBasic.NET programming.
+Easily create and read some common document in VisualBasic: http://www.codeproject.com/Articles/1099296/Easy-Document-in-VisualBasic</description>
+        <summary>Source code can be download from github.com:
+
+https://github.com/xieguigang/VisualBasic_AppFramework</summary>
+        <releaseNotes>x64, AnyCPU
+Code style for this runtime library is on Codeproject article: http://www.codeproject.com/Articles/1101608/Code-style-guidelines-for-Microsoft-VisualBasic</releaseNotes>
+        <copyright>xie.guigang@gcmodeller.org</copyright>
+        <language>en-US</language>
+        <tags>VB.NET .NET4.0</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="Microsoft.VisualBasic" targetFramework=".NETFramework4.0" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" />
+        <file src="Microsoft.VisualBasic.DocumentFormat.Csv.dll" target="Microsoft.VisualBasic.DocumentFormat.Csv.dll" />
+        <file src="Microsoft.VisualBasic.DocumentFormat.Csv.pdb" target="Microsoft.VisualBasic.DocumentFormat.Csv.pdb" />
+        <file src="Microsoft.VisualBasic.DocumentFormat.Csv.xml" target="Microsoft.VisualBasic.DocumentFormat.Csv.xml" />
+    </files>
+</package>
