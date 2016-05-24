@@ -1,4 +1,7 @@
 ﻿Imports System.Xml.Serialization
+Imports Microsoft.VisualBasic.ComponentModel.DataSourceModel
+Imports Microsoft.VisualBasic.Language
+Imports Microsoft.VisualBasic.Linq
 
 <XmlRoot("package", [Namespace]:="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd")>
 Public Class Nuspec
@@ -30,6 +33,23 @@ Public Class metadata
     Public Property language As String
     Public Property tags As String
     Public Property frameworkAssemblies As frameworkAssembly()
+
+    Public Function GetTagLinks() As NamedValue(Of String)()
+        If String.IsNullOrEmpty(tags) Then
+            Return {}
+        End If
+
+        Dim tokens As String() = tags.Split
+        Return tokens.ToArray(Function(tag) New NamedValue(Of String)(tag, $"https://www.nuget.org/packages?q=Tags%3A""{tag}"""))
+    End Function
+
+    Public Function TagsMarkdownLinks() As String
+        Dim LQuery As String() =
+            LinqAPI.Exec(Of String) <= From tag As NamedValue(Of String)
+                                       In GetTagLinks()
+                                       Select $"[{tag.Name}]({tag.x})"
+        Return String.Join(" ", LQuery)
+    End Function
 End Class
 
 Public Class frameworkAssembly

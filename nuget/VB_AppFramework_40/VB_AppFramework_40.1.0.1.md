@@ -26,7 +26,7 @@ xie.guigang@live.com
 ##Copyright
 xie.guigang@gcmodeller.org
 ##Tags
-VB.NET .NET4.0
+[VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET4.0](https://www.nuget.org/packages?q=Tags%3A".NET4.0")
 ##Dependencies
 >[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.0"}]
 

@@ -33,7 +33,7 @@ Module MarkdownGenerator
         Call sb.AppendLine("##Copyright")
         Call sb.AppendLine(nuspec.metadata.copyright)
         Call sb.AppendLine("##Tags")
-        Call sb.AppendLine(nuspec.metadata.tags)
+        Call sb.AppendLine(nuspec.metadata.TagsMarkdownLinks)
         Call sb.AppendLine("##Dependencies")
         Call sb.AppendLine(">" & nuspec.metadata.frameworkAssemblies.GetJson)
         Call sb.AppendLine()

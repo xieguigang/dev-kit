@@ -24,7 +24,7 @@ xie.guigang@live.com
 ##Copyright
 xie.guigang@gcmodeller.org
 ##Tags
-VB.NET
+[VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET")
 ##Dependencies
 >[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
 
