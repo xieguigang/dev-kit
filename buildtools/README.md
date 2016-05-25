@@ -15,7 +15,9 @@ There is two section in the nuget package meta data:
 
 ```visualbasic
 Public Class metadata
-    <XmlAttribute> Public Property minClientVersion As String
+
+    <XmlAttribute> 
+    Public Property minClientVersion As String
     Public Property id As String
     Public Property version As String
     Public Property title As String
@@ -42,6 +44,7 @@ End Class
 + files
 
 > The file list item is mainly consist with two attribute:
+
 ```visualbasic
 Public Class file
     <XmlAttribute> Public Property src As String
@@ -50,6 +53,7 @@ End Class
 ```
 
 So that finally we can build a simple class object for stands for the description meta data:
+
 ```visualbasic
 <XmlRoot("package", [Namespace]:="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd")>
 Public Class Nuspec
@@ -68,7 +72,7 @@ Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
 ### output markdown document from meta
 By creates the markdown document from the meta data, learn the mearkdown syntax can be reference from [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
-+ The tag data
+#### The nuget tag link
 
 > The tag links on the nuget is in the format as:
 > https://www.nuget.org/packages?q=Tags%3A%"{tag_data}"
@@ -83,27 +87,33 @@ Imports Microsoft.VisualBasic.Linq
 The tags data in the nuget package description meta data is consist of sevral tag tokens and each token is seperated by a space, so that we can parsing the tag data just by using **String.Split** function, and then generate the tag and link data by using string interpolating or **String.Format** function, here is the example:
 
 ```visualbasic
-  Public Function GetTagLinks() As NamedValue(Of String)()
-        If String.IsNullOrEmpty(tags) Then
-            Return {}
-        End If
+Public Function GetTagLinks() As NamedValue(Of String)()
+    If String.IsNullOrEmpty(tags) Then
+        Return {}
+    End If
 
-        Dim tokens As String() = tags.Split
-        Return tokens.ToArray(Function(tag) New NamedValue(Of String)(tag, $"https://www.nuget.org/packages?q=Tags%3A""{tag}"""))
-    End Function
+    Dim tokens As String() = tags.Split
+    Return tokens.ToArray(Function(tag) New NamedValue(Of String)(tag, $"https://www.nuget.org/packages?q=Tags%3A""{tag}"""))
+End Function
 
-    Public Function TagsMarkdownLinks() As String
-        Dim LQuery As String() =
-            LinqAPI.Exec(Of String) <= From tag As NamedValue(Of String)
-                                       In GetTagLinks()
-                                       Select $"[{tag.Name}]({tag.x})"
-        Return String.Join(" ", LQuery)
-    End Function
+Public Function TagsMarkdownLinks() As String
+    Dim LQuery As String() =
+        LinqAPI.Exec(Of String) <= From tag As NamedValue(Of String)
+                                   In GetTagLinks()
+                                   Select $"[{tag.Name}]({tag.x})"
+    Return String.Join(" ", LQuery)
+End Function
 ```
 
 Due to the reason of the link syntax in markdown is:
 
 \[Caption text\](url)
 
-+ The 
+So that we can simply generate the tag link data for markdown by using string interpolating:
+
+$"\[{tag.Name}\]({tag.x})"
+
+Processing he author links in the nuget is the same as tag data:
+
+> https://www.nuget.org/profiles/{nuspec.metadata.authors})"
 
