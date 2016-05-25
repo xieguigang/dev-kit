@@ -75,7 +75,7 @@ By creates the markdown document from the meta data, learn the mearkdown syntax 
 #### The nuget tag link
 
 > The tag links on the nuget is in the format as:
-> https://www.nuget.org/packages?q=Tags%3A%"{tag_data}"
+> https://www.nuget.org/packages?q=Tags%3A"{tag_data}"
 
 ```visualbasic
 Imports System.Xml.Serialization
@@ -115,5 +115,19 @@ $"\[{tag.Name}\]({tag.x})"
 
 Processing he author links in the nuget is the same as tag data:
 
-> https://www.nuget.org/profiles/{nuspec.metadata.authors})"
+> https://www.nuget.org/profiles/{nuspec.metadata.authors}"
 
+The whole function for generates the markdown document is at this file: [MarkdownGenerator.vb](https://github.com/xieguigang/nuget-backup/blob/master/nugetIndex/nuget/MarkdownGenerator.vb)
+
+Now we can generates the markdown document for your nuget package:
+
+```visualbasic
+Public Function ExecFile(path As String, args As CommandLine) As Integer
+    Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
+    Dim md As String = nuspec.Document
+    Dim out As String = path.TrimFileExt & ".md"
+    Return md.SaveTo(out).CLICode
+End Function
+```
+
+Load your nuget meta data as xml, and then generates the markdown, the last save thr document string.
