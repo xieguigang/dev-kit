@@ -54,3 +54,9 @@ Public Class Nuspec
 
 End Class
 ```
+
+The by construct this meta data class object, and this will makes the parsing of nuget package metadata easily in one line of code:
+```visualbasic
+Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
+```
+
