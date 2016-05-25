@@ -108,11 +108,11 @@ End Function
 
 Due to the reason of the link syntax in markdown is:
 
-\[Caption text\](url)
+> \[Caption text\](url)
 
 So that we can simply generate the tag link data for markdown by using string interpolating:
 
-$"\[{tag.Name}\]({tag.x})"
+> $"\[{tag.Name}\]({tag.x})"
 
 Processing he author links in the nuget is the same as tag data:
 
