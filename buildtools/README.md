@@ -65,12 +65,13 @@ End Class
 ```
 
 The by construct this meta data class object, and this will makes the parsing of nuget package metadata easily in one line of code:
+
 ```visualbasic
 Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
 ```
 
-### output markdown document from meta
-By creates the markdown document from the meta data, learn the mearkdown syntax can be reference from [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+### Output markdown document from meta
+Learn the mearkdown syntax can be review from [Mastering Markdown](https://guides.github.com/features/mastering-markdown/), and this section about how to generates some link element from the nuget.
 
 #### The nuget tag link
 
