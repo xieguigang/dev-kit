@@ -3,11 +3,15 @@
 Install app runtime for this utility tool:
 > PM> Install-Package VB_AppFramework
 
+### Load nuget describ metadata
+
 Parsing nuget package description meta data file by using Xml deserializatin:
 
 There is two section in the nuget package meta data:
-1. metadata
-The meta data section records the summary information about your nuget package, and it can be parsing by just using a simple class:
+
++ metadata
+
+> The meta data section records the summary information about your nuget package, and it can be parsing by just using a simple class:
 
 ```visualbasic
 Public Class metadata
@@ -35,8 +39,9 @@ Public Class frameworkAssembly
 End Class
 ```
 
-2. files
-The file list item is mainly consist with two attribute:
++ files
+
+> The file list item is mainly consist with two attribute:
 ```visualbasic
 Public Class file
     <XmlAttribute> Public Property src As String
@@ -59,4 +64,6 @@ The by construct this meta data class object, and this will makes the parsing of
 ```visualbasic
 Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
 ```
+
+### output markdown document from meta
 
