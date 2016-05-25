@@ -5,6 +5,9 @@ My nuget published packages meta data backup database.
 >[GCModeller.Core.1.0.0](https://github.com/xieguigang/nuget-backup/tree/master/nuget//GCModeller.Core/GCModeller.Core.1.0.0.md)<br />
 >[GCModeller.Core.1.0.1](https://github.com/xieguigang/nuget-backup/tree/master/nuget//GCModeller.Core/GCModeller.Core.1.0.1.md)<br />
 
+##httpd
+>[VB.httpd.1.0.0](https://github.com/xieguigang/nuget-backup/tree/master/nuget//httpd/VB.httpd.1.0.0.md)<br />
+
 ##NCBI_localblast
 >[NCBI_localblast.1.0.0](https://github.com/xieguigang/nuget-backup/tree/master/nuget//NCBI_localblast/NCBI_localblast.1.0.0.md)<br />
 >[NCBI_localblast.1.0.1](https://github.com/xieguigang/nuget-backup/tree/master/nuget//NCBI_localblast/NCBI_localblast.1.0.1.md)<br />
