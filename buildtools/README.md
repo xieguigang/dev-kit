@@ -60,10 +60,8 @@ So that finally we can build a simple class object for stands for the descriptio
 ```vb.net
 <XmlRoot("package", [Namespace]:="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd")>
 Public Class Nuspec
-
     Public Property metadata As metadata
     Public Property files As file()
-
 End Class
 ```
 
