@@ -29,6 +29,7 @@ My nuget published packages meta data backup database.
 >[VB_AppFramework.1.0.26](https://github.com/xieguigang/nuget-backup/tree/master/nuget//VB_AppFramework/VB_AppFramework.1.0.26.md)<br />
 >[VB_AppFramework.1.0.28](https://github.com/xieguigang/nuget-backup/tree/master/nuget//VB_AppFramework/VB_AppFramework.1.0.28.md)<br />
 >[VB_AppFramework.1.0.3](https://github.com/xieguigang/nuget-backup/tree/master/nuget//VB_AppFramework/VB_AppFramework.1.0.3.md)<br />
+>[VB_AppFramework.1.0.30](https://github.com/xieguigang/nuget-backup/tree/master/nuget//VB_AppFramework/VB_AppFramework.1.0.30.md)<br />
 
 ##VB_AppFramework_40
 >[VB_AppFramework_40.1.0.0](https://github.com/xieguigang/nuget-backup/tree/master/nuget//VB_AppFramework_40/VB_AppFramework_40.1.0.0.md)<br />
