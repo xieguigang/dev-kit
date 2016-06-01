@@ -17,6 +17,7 @@ My nuget published packages meta data backup database.
 
 ##Notify-OSD
 >[Notify-OSD.1.0.0](https://github.com/xieguigang/nuget-backup/tree/master/nuget//Notify-OSD/Notify-OSD.1.0.0.md)<br />
+>[Notify-OSD.1.0.1](https://github.com/xieguigang/nuget-backup/tree/master/nuget//Notify-OSD/Notify-OSD.1.0.1.md)<br />
 
 ##VB.WinForm
 >[VisualBasic.WinForm.1.0.0](https://github.com/xieguigang/nuget-backup/tree/master/nuget//VB.WinForm/VisualBasic.WinForm.1.0.0.md)<br />
