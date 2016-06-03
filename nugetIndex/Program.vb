@@ -11,15 +11,23 @@ Module Program
     End Function
 
     ''' <summary>
-    ''' path /out &lt;path.md> /github &lt;link>
+    ''' path /out &lt;path.md> /github &lt;link> /hexo
     ''' </summary>
     ''' <param name="path"></param>
     ''' <param name="args"></param>
     ''' <returns></returns>
     Public Function ExecFile(path As String, args As CommandLine) As Integer
         Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
-        Dim md As String = nuspec.Document(args - "/github")
         Dim out As String = args.GetValue("/out", path.TrimFileExt & ".md")
+        Dim index As String = args - "/github"
+        Dim md As String
+
+        If args.GetBoolean("/hexo") Then
+            md = nuspec.HexoMarkdown(index)
+        Else
+            md = nuspec.Document(index)
+        End If
+
         Return md.SaveTo(out).CLICode
     End Function
 
@@ -80,16 +88,50 @@ Module Program
         Return 0
     End Function
 
-    <ExportAPI("/Hexo.Build", Usage:="/source <inDIR> /out <outDIR>")>
+    <ExportAPI("/Hexo.Build", Usage:="/Hexo.Build /source <inDIR> /out <outDIR>")>
     Public Function HexoBuild(args As CommandLine) As Integer
+        Dim files As IEnumerable(Of String) =
+            ls - l - r - wildcards("*.nuspec") <= args("/source")
+        Dim indexURL As String = "../index.html"
+        Dim sb As New StringBuilder("# nuget-backup" & vbCrLf)
+        Dim out As String = args("/out")
 
+        Call sb.AppendLine("My nuget published packages meta data backup database.")
+
+        Dim LQuery = From path As String
+                     In files
+                     Let name As String = path.BaseName
+                     Let DIR As String = path.ParentPath
+                     Select name,
+                         DIR,
+                         path
+                     Group By DIR Into Group
+
+        Call sb.AppendLine("# __--==Index==--__")
+
+        For Each package In LQuery
+            Dim name As String = package.DIR.BaseName
+
+            Call sb.AppendLine("## " & name)
+
+            For Each ver In package.Group
+                Call sb.AppendLine(__hexoLink(ver.name, ver.path.ParentDirName))
+            Next
+
+            Call sb.AppendLine()
+        Next
+
+        Call sb.SaveTo(out & "/index.md")
+        Call App.SelfFolks(files.ToArray(Function(s) $"{s.CliPath} /github {indexURL}"), 4)
+
+        Return 0
     End Function
 
     Private Function __githubLink(verName As String, link As String, parent As String) As String
         Return $">[{verName}]({link}/{parent}/{verName}.md)<br />"
     End Function
 
-    Private Function __hexoLink(verName As String, link As String, parent As String) As String
-
+    Private Function __hexoLink(verName As String, parent As String) As String
+        Return $">[{verName}](./{parent}/{verName}.html)<br />"
     End Function
 End Module

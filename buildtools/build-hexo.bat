@@ -1,0 +1,1 @@
+"F:\nuget-backup\nugetIndex\bin\x64\Debug\NuGetIndex.exe" /Hexo.Build /source "F:\nuget-backup\nuget" /out "D:\xieguigang.github.io-hexo\hexo\source\nuget"
