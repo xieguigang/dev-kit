@@ -1,4 +1,4 @@
-#Ubuntu like on screen notifications
+# Ubuntu like on screen notifications
 Version: **1.0.0**
 
 Project URL: https://github.com/xieguigang/Notify_OSD
@@ -9,28 +9,31 @@ To install **[Ubuntu like on screen notifications](https://www.nuget.org/package
 > PM>  **Install-Package Notify-OSD**
 
 
-##Summary
+## Summary
 Ubuntu like on screen notifications for .NET winform
 
 Manual and source code can be download from github:
 https://github.com/xieguigang/Notify_OSD
 
 Ubuntu like on screen notifications for .NET winform
-##Release Notes
+## Release Notes
 x86
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 gpl3
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET](https://www.nuget.org/packages?q=Tags%3A".NET")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > C:\Users\xieguigang\Source\Repos\Notify_OSD\bin\x86\Release\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll<br />
 > C:\Users\xieguigang\Source\Repos\Notify_OSD\bin\x86\Release\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb<br />
 > C:\Users\xieguigang\Source\Repos\Notify_OSD\bin\x86\Release\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml<br />

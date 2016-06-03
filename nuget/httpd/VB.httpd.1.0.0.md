@@ -1,4 +1,4 @@
-#VisualBasic light http server library
+# VisualBasic light http server library
 Version: **1.0.0**
 
 Project URL: https://github.com/SMRUCC/REST_Framework
@@ -9,7 +9,7 @@ To install **[VisualBasic light http server library](https://www.nuget.org/packa
 > PM>  **Install-Package VB.httpd**
 
 
-##Summary
+## Summary
 A lite version of http server, currently not support https
 source code can be download from github:
 https://github.com/SMRUCC/REST_Framework
@@ -20,21 +20,24 @@ A lite version of http server, currently not support https
 
 for commandline usage, type in terminal:
 httpd ?
-##Release Notes
+## Release Notes
 can running on linux, but some file path case sensitive could case problem of file not found
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 xie.guigang@gcmodeller.org
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [mono](https://www.nuget.org/packages?q=Tags%3A"mono") [.NET](https://www.nuget.org/packages?q=Tags%3A".NET") [x64](https://www.nuget.org/packages?q=Tags%3A"x64")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > D:\httpd\httpd<br />
 > D:\httpd\httpd.exe<br />
 > D:\httpd\httpd.exe.config<br />

@@ -1,4 +1,4 @@
-#VisualBasic App Framework for .NET 4.0
+# VisualBasic App Framework for .NET 4.0
 Version: **1.0.29**
 
 Project URL: https://github.com/xieguigang/VisualBasic_AppFramework
@@ -9,33 +9,36 @@ To install **[VisualBasic App Framework for .NET 4.0](https://www.nuget.org/pack
 > PM>  **Install-Package VB_AppFramework_40**
 
 
-##Summary
+## Summary
 Source code can be download from github.com:
 
 https://github.com/xieguigang/VisualBasic_AppFramework
 
 This library enriched the language features of VisualBasic.NET programming.
 Easily create and read some common document in VisualBasic: http://www.codeproject.com/Articles/1099296/Easy-Document-in-VisualBasic
-##Release Notes
+## Release Notes
 reconstruct the data source schema extension at namespace: Microsoft.VisualBasic.ComponentModel.DataSourceModel.SchemaMaps
 
 improvements md5hash tolong function based on google cityhash algorithm: 
 https://github.com/xieguigang/VisualBasic_AppFramework/commit/20e33c136f949c35d347e27e83035629bf0226ee
 
 Code style for this runtime library is on Codeproject article: http://www.codeproject.com/Articles/1101608/Code-style-guidelines-for-Microsoft-VisualBasic
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 xie.guigang@gcmodeller.org
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET4.0](https://www.nuget.org/packages?q=Tags%3A".NET4.0")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.0"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.0"}]
+```
 
 
-##File includes
+## File includes
 > x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll<br />
 > x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb<br />
 > x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml<br />

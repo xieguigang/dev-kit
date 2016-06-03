@@ -1,4 +1,4 @@
-#NCBI localblast wrapper library
+# NCBI localblast wrapper library
 Version: **1.0.0**
 
 Project URL: https://github.com/SMRUCC/ncbi-localblast
@@ -9,27 +9,30 @@ To install **[NCBI localblast wrapper library](https://www.nuget.org/packages/NC
 > PM>  **Install-Package NCBI_localblast**
 
 
-##Summary
+## Summary
 This library provides the NCBI blast+ output parser and some data analysis API, like SBH, BBH, venn diagram analysis for .NET language
 
 This library provides the NCBI blast+ output parser and some data analysis API, like SBH, BBH, venn diagram analysis
 project source code can be download from github:
 https://github.com/SMRUCC/ncbi-localblast
-##Release Notes
+## Release Notes
 x64
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 xie.guigang@gcmodeller.org
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET4.6](https://www.nuget.org/packages?q=Tags%3A".NET4.6") [x64](https://www.nuget.org/packages?q=Tags%3A"x64")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > ..\localblast\Tools\bin\x64\Publish\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.dll<br />
 > ..\localblast\Tools\bin\x64\Publish\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.pdb<br />
 > ..\localblast\Tools\bin\x64\Publish\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.xml<br />

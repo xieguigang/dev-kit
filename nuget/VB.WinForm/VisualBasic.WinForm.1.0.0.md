@@ -1,4 +1,4 @@
-#VisualBasic WinForm Feature API
+# VisualBasic WinForm Feature API
 Version: **1.0.0**
 
 Project URL: https://github.com/xieguigang/Microsoft.VisualBasic.Windows.Forms
@@ -9,25 +9,28 @@ To install **[VisualBasic WinForm Feature API](https://www.nuget.org/packages/Vi
 > PM>  **Install-Package VisualBasic.WinForm**
 
 
-##Summary
+## Summary
 
 
 This library provides windows shell extension feature API, example as the taskbar API, etc
-##Release Notes
+## Release Notes
 x86
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 gpl3
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET](https://www.nuget.org/packages?q=Tags%3A".NET") [Windows](https://www.nuget.org/packages?q=Tags%3A"Windows") [FeatureAPI](https://www.nuget.org/packages?q=Tags%3A"FeatureAPI")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll<br />
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll.config<br />
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb<br />

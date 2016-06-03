@@ -1,4 +1,4 @@
-#VisualBasic App Framework
+# VisualBasic App Framework
 Version: **1.0.1**
 
 Project URL: https://github.com/xieguigang/VisualBasic_AppFramework
@@ -9,27 +9,30 @@ To install **[VisualBasic App Framework](https://www.nuget.org/packages/VB_AppFr
 > PM>  **Install-Package VB_AppFramework**
 
 
-##Summary
+## Summary
 Required of .NET framework 4.6. and x64 program.
 This package library enrichment the programming capability and language features of VisualBasic language
 
 Source code can be download from github.com:
 https://github.com/xieguigang/VisualBasic_AppFramework
-##Release Notes
+## Release Notes
 some module is not ready yet, not recommended this version
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 xie.guigang@gcmodeller.org
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll<br />
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb<br />
 > Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml<br />

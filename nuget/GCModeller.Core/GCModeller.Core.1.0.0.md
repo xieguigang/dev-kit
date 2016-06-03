@@ -1,4 +1,4 @@
-#GCModeller base core modules
+# GCModeller base core modules
 Version: **1.0.0**
 
 Project URL: https://github.com/SMRUCC/GCModeller.Core
@@ -9,7 +9,7 @@ To install **[GCModeller base core modules](https://www.nuget.org/packages/GCMod
 > PM>  **Install-Package GCModeller.Core**
 
 
-##Summary
+## Summary
 This library contains some common object model in the bioinformatics and database reader.
 
 The common database reader includes:
@@ -20,21 +20,24 @@ MetaCyc database parser
 Common Fasta sequence database I/O
 DOOR database reader
 etc.
-##Release Notes
+## Release Notes
 
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 xie.guigang@gcmodeller.org
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET](https://www.nuget.org/packages?q=Tags%3A".NET")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.dll<br />
 > LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.pdb<br />
 > LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.xml<br />

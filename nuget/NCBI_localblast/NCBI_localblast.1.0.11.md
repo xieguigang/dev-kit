@@ -1,4 +1,4 @@
-#NCBI localblast tool library for .NET
+# NCBI localblast tool library for .NET
 Version: **1.0.11**
 
 Project URL: https://github.com/SMRUCC/ncbi-localblast
@@ -9,28 +9,31 @@ To install **[NCBI localblast tool library for .NET](https://www.nuget.org/packa
 > PM>  **Install-Package NCBI_localblast**
 
 
-##Summary
+## Summary
 This library provides the NCBI blast+ output parser and some data analysis API, like SBH, BBH, venn diagram analysis for .NET language. Required of .NET 4.6 and x64 platform
 
 This library provides the NCBI blast+ output parser and some data analysis API, like SBH, BBH, venn diagram analysis.
 This package also provides a batch schedule extension for the large scale localblast alignment parallel task in multiple localblast process.
 project source code can be download from github:
 https://github.com/SMRUCC/ncbi-localblast
-##Release Notes
+## Release Notes
 update vb.net app framework
-##Owners
+## Owners
 xie.guigang@live.com
-##Authors
+## Authors
 [xieguigang](https://www.nuget.org/profiles/xieguigang)
-##Copyright
+## Copyright
 xie.guigang@gcmodeller.org
-##Tags
+## Tags
 [VB.NET](https://www.nuget.org/packages?q=Tags%3A"VB.NET") [.NET4.6](https://www.nuget.org/packages?q=Tags%3A".NET4.6") [x64](https://www.nuget.org/packages?q=Tags%3A"x64") [GCModeller](https://www.nuget.org/packages?q=Tags%3A"GCModeller") [bioinformatics](https://www.nuget.org/packages?q=Tags%3A"bioinformatics") [NCBI](https://www.nuget.org/packages?q=Tags%3A"NCBI") [blast+](https://www.nuget.org/packages?q=Tags%3A"blast+")
-##Dependencies
->[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"},{"assemblyName":"System.Data","targetFramework":".NETFramework4.6"}]
+## Dependencies
+>
+```json
+[{"assemblyName":"Microsoft.VisualBasic","targetFramework":".NETFramework4.6"},{"assemblyName":"System.Data","targetFramework":".NETFramework4.6"}]
+```
 
 
-##File includes
+## File includes
 > x64\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.dll<br />
 > x64\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.pdb<br />
 > x64\LANS.SystemsBiology.Assembly.Components_v2.0_33.0.0.0__89845dcd8080cc91.xml<br />
