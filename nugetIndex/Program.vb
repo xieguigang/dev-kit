@@ -19,13 +19,12 @@ Module Program
     Public Function ExecFile(path As String, args As CommandLine) As Integer
         Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
         Dim out As String = args.GetValue("/out", path.TrimFileExt & ".md")
-        Dim index As String = args - "/github"
         Dim md As String
 
         If args.GetBoolean("/hexo") Then
-            md = nuspec.HexoMarkdown(index)
+            md = nuspec.HexoMarkdown("../index.html")
         Else
-            md = nuspec.Document(index)
+            md = nuspec.Document(args - "/github")
         End If
 
         Return md.SaveTo(out).CLICode
@@ -93,10 +92,12 @@ Module Program
         Dim files As IEnumerable(Of String) =
             ls - l - r - wildcards("*.nuspec") <= args("/source")
         Dim indexURL As String = "../index.html"
-        Dim sb As New StringBuilder("# nuget-backup" & vbCrLf)
-        Dim out As String = args("/out")
-
-        Call sb.AppendLine("My nuget published packages meta data backup database.")
+        Dim sb As New StringBuilder($"---
+title: My nuget packages
+date: {Now.ToString}
+---")
+        Call sb.AppendLine(vbCrLf)
+        Call sb.AppendLine("My published nuget packages were indexed at here:")
 
         Dim LQuery = From path As String
                      In files
@@ -121,8 +122,13 @@ Module Program
             Call sb.AppendLine()
         Next
 
+        Dim out As String = args("/out")
+        Dim task As Func(Of String, String) =
+            Function(path) $"{path.CliPath} /out {(out & "/" & path.ParentDirName & "/" & path.BaseName & ".md").CliPath} /hexo"
+        Dim CLI As String() = files.ToArray(task)
+
         Call sb.SaveTo(out & "/index.md")
-        Call App.SelfFolks(files.ToArray(Function(s) $"{s.CliPath} /github {indexURL}"), 4)
+        Call App.SelfFolks(CLI, 4)
 
         Return 0
     End Function
@@ -132,6 +138,6 @@ Module Program
     End Function
 
     Private Function __hexoLink(verName As String, parent As String) As String
-        Return $">[{verName}](./{parent}/{verName}.html)<br />"
+        Return $"+ [{verName}](./{parent}/{verName}.html)<br />"
     End Function
 End Module

@@ -8,7 +8,7 @@ Module MarkdownGenerator
     Public Const nuget As String = "https://www.nuget.org/packages/{0}/"
 
     <Extension>
-    Public Function Document(nuspec As Nuspec, github As String) As String
+    Public Function Document(nuspec As Nuspec, github As String, Optional hexo As Boolean = False) As String
         Dim sb As New StringBuilder($"[<< Back to Index]({github})" & vbCrLf)
 
         Call sb.AppendLine($"# {nuspec.metadata.title}" & vbCrLf)
@@ -37,7 +37,9 @@ Module MarkdownGenerator
         Call sb.AppendLine("## Tags")
         Call sb.AppendLine(nuspec.metadata.TagsMarkdownLinks)
         Call sb.AppendLine("## Dependencies")
-        Call sb.AppendLine(">")
+        If Not hexo Then
+            Call sb.AppendLine(">")
+        End If
         Call sb.AppendLine("```json")
         Call sb.AppendLine(nuspec.metadata.frameworkAssemblies.GetJson)
         Call sb.AppendLine("```")
@@ -45,8 +47,10 @@ Module MarkdownGenerator
         Call sb.AppendLine()
         Call sb.AppendLine("## File includes")
 
+        Dim c As String = If(hexo, "+ ", "> ")
+
         For Each file In nuspec.files
-            Call sb.AppendLine("> " & file.src & "<br />")
+            Call sb.AppendLine(c & file.src & "<br />")
         Next
 
         Return sb.ToString
@@ -60,10 +64,9 @@ Module MarkdownGenerator
         $"---
 title: {nuspec.metadata.title}
 date: {Now.ToString}
-tags: [{String.Join(",", nuspec.metadata.GetTagLinks.ToArray(Function(x) x.Name))}]
 ---")
         Call sb.AppendLine()
-        Call sb.AppendLine(nuspec.Document(index))
+        Call sb.AppendLine(nuspec.Document(index, True))
 
         Return sb.ToString
     End Function
