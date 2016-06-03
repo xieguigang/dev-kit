@@ -1,15 +1,17 @@
 ﻿Imports System.Runtime.CompilerServices
 Imports System.Text
 Imports Microsoft.VisualBasic.Serialization
+Imports Microsoft.VisualBasic.Linq
 
 Module MarkdownGenerator
 
     Public Const nuget As String = "https://www.nuget.org/packages/{0}/"
 
     <Extension>
-    Public Function Document(nuspec As Nuspec) As String
-        Dim sb As New StringBuilder($"# {nuspec.metadata.title}" & vbCrLf)
+    Public Function Document(nuspec As Nuspec, github As String) As String
+        Dim sb As New StringBuilder($"[<< Back to Index]({github})" & vbCrLf)
 
+        Call sb.AppendLine($"# {nuspec.metadata.title}" & vbCrLf)
         Call sb.AppendLine("Version: **" & nuspec.metadata.version & "**")
         Call sb.AppendLine()
         Call sb.AppendLine("Project URL: " & nuspec.metadata.projectUrl)
@@ -46,6 +48,22 @@ Module MarkdownGenerator
         For Each file In nuspec.files
             Call sb.AppendLine("> " & file.src & "<br />")
         Next
+
+        Return sb.ToString
+    End Function
+
+    <Extension>
+    Public Function HexoMarkdown(nuspec As Nuspec, index As String) As String
+        Dim sb As New StringBuilder()
+
+        Call sb.AppendLine(
+        $"---
+title: {nuspec.metadata.title}
+date: {Now.ToString}
+tags: [{String.Join(",", nuspec.metadata.GetTagLinks.ToArray(Function(x) x.Name))}]
+---")
+        Call sb.AppendLine()
+        Call sb.AppendLine(nuspec.Document(index))
 
         Return sb.ToString
     End Function
