@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="1.0.0">
+        <id>VisualBasic.DBI</id>
+        <version>1.0.0</version>
+        <title>VisualBasic Database Interface</title>
+        <authors>xieguigang</authors>
+        <owners>xie.guigang@live.com</owners>
+        <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+        <projectUrl>https://github.com/xieguigang/VisualBasic.DBI</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>MySQL and SQLite Database data entity mapping interface for VisualBasic</description>
+        <summary>MySQL and SQLite Database data entity mapping interface for VisualBasic</summary>
+        <releaseNotes>AnyCPU</releaseNotes>
+        <copyright>GPL3</copyright>
+        <language>en-US</language>
+        <tags>VB.NET Mapping .NET MySQL SQLite</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="Microsoft.VisualBasic" targetFramework=".NETFramework4.6" />
+            <frameworkAssembly assemblyName="System.Data.Linq" targetFramework=".NETFramework0.0, Version=v4.6" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="x64\SQLite.Interop.dll" target="x64\SQLite.Interop.dll" />
+        <file src="x86\SQLite.Interop.dll" target="x86\SQLite.Interop.dll" />
+        <file src="EntityFramework.dll" target="EntityFramework.dll" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" />
+        <file src="MySql.Data.dll" target="MySql.Data.dll" />
+        <file src="MySql.Data.Entity.EF5.dll" target="MySql.Data.Entity.EF5.dll" />
+        <file src="MySql.Data.Entity.EF6.dll" target="MySql.Data.Entity.EF6.dll" />
+        <file src="Oracle.LinuxCompatibility.LibMySQL.dll" target="Oracle.LinuxCompatibility.LibMySQL.dll" />
+        <file src="Oracle.LinuxCompatibility.LibMySQL.dll.config" target="Oracle.LinuxCompatibility.LibMySQL.dll.config" />
+        <file src="Oracle.LinuxCompatibility.LibMySQL.pdb" target="Oracle.LinuxCompatibility.LibMySQL.pdb" />
+        <file src="Oracle.LinuxCompatibility.LibMySQL.xml" target="Oracle.LinuxCompatibility.LibMySQL.xml" />
+        <file src="System.Data.SQLite.dll" target="System.Data.SQLite.dll" />
+        <file src="System.Data.SQLite.EF6.dll" target="System.Data.SQLite.EF6.dll" />
+        <file src="System.Data.SQLite.EF6.pdb" target="System.Data.SQLite.EF6.pdb" />
+        <file src="System.Data.SQLite.Linq.DataMapping.Interface.dll" target="System.Data.SQLite.Linq.DataMapping.Interface.dll" />
+        <file src="System.Data.SQLite.Linq.DataMapping.Interface.dll.config" target="System.Data.SQLite.Linq.DataMapping.Interface.dll.config" />
+        <file src="System.Data.SQLite.Linq.DataMapping.Interface.pdb" target="System.Data.SQLite.Linq.DataMapping.Interface.pdb" />
+        <file src="System.Data.SQLite.Linq.DataMapping.Interface.xml" target="System.Data.SQLite.Linq.DataMapping.Interface.xml" />
+        <file src="System.Data.SQLite.Linq.dll" target="System.Data.SQLite.Linq.dll" />
+        <file src="System.Data.SQLite.Linq.pdb" target="System.Data.SQLite.Linq.pdb" />
+        <file src="System.Data.SQLite.pdb" target="System.Data.SQLite.pdb" />
+    </files>
+</package>
