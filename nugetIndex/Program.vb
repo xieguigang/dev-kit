@@ -138,6 +138,6 @@ date: {Now.ToString}
     End Function
 
     Private Function __hexoLink(verName As String, parent As String) As String
-        Return $"+ [{verName}](./{parent}/{verName}.html)<br />"
+        Return $"+ [{verName}]({parent}/{verName}.html)<br />"
     End Function
 End Module
