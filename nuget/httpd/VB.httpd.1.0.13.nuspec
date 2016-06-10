@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="1.0.0">
+        <id>VB.httpd</id>
+        <version>1.0.13</version>
+        <title>VisualBasic light http server library</title>
+        <authors>xieguigang</authors>
+        <owners>xie.guigang@live.com</owners>
+        <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+        <projectUrl>https://github.com/xieguigang/REST_Framework</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/xieguigang/REST_Framework/master/HTTPServer/REST/Sandbox.ico</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>A lite version of http server, currently not support https
+
+for commandline usage, type in terminal:
+httpd ?</description>
+        <summary>A lite version of http server, currently not support https
+source code can be download from github:
+https://github.com/xieguigang/REST_Framework
+
+Platform:  Win32/Linux  .NET 4.6/mono x64</summary>
+        <releaseNotes>fix a bug on the file index.html when the url is in format like:  http://host/sub</releaseNotes>
+        <copyright>xie.guigang@gcmodeller.org</copyright>
+        <language>en-US</language>
+        <tags>VB.NET mono .NET x64</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="Microsoft.VisualBasic" targetFramework=".NETFramework4.6" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="x64\httpd.exe" target="x64\httpd.exe" />
+        <file src="x64\httpd.exe.config" target="x64\httpd.exe.config" />
+        <file src="x64\httpd.pdb" target="x64\httpd.pdb" />
+        <file src="x64\httpd.xml" target="x64\httpd.xml" />
+        <file src="x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" target="x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" />
+        <file src="x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" target="x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" />
+        <file src="x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" target="x64\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" />
+        <file src="x64\SMRUCC.HTTPInternal.dll" target="x64\SMRUCC.HTTPInternal.dll" />
+        <file src="x64\SMRUCC.HTTPInternal.pdb" target="x64\SMRUCC.HTTPInternal.pdb" />
+        <file src="x64\SMRUCC.HTTPInternal.xml" target="x64\SMRUCC.HTTPInternal.xml" />
+        <file src="x86\httpd.exe" target="x86\httpd.exe" />
+        <file src="x86\httpd.exe.config" target="x86\httpd.exe.config" />
+        <file src="x86\httpd.pdb" target="x86\httpd.pdb" />
+        <file src="x86\httpd.xml" target="x86\httpd.xml" />
+        <file src="x86\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" target="x86\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" />
+        <file src="x86\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" target="x86\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" />
+        <file src="x86\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" target="x86\Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" />
+        <file src="x86\SMRUCC.HTTPInternal.dll" target="x86\SMRUCC.HTTPInternal.dll" />
+        <file src="x86\SMRUCC.HTTPInternal.pdb" target="x86\SMRUCC.HTTPInternal.pdb" />
+        <file src="x86\SMRUCC.HTTPInternal.xml" target="x86\SMRUCC.HTTPInternal.xml" />
+    </files>
+</package>
