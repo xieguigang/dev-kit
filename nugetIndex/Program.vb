@@ -18,7 +18,7 @@ Module Program
     ''' <returns></returns>
     Public Function ExecFile(path As String, args As CommandLine) As Integer
         Dim nuspec As Nuspec = path.LoadXml(Of Nuspec)
-        Dim out As String = args.GetValue("/out", path.TrimFileExt & ".md")
+        Dim out As String = args.GetValue("/out", path.TrimSuffix & ".md")
         Dim md As String
 
         If args.GetBoolean("/hexo") Then

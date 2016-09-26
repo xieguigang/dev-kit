@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="1.0.0">
+        <id>VB_AppFramework</id>
+        <version>2.0.1-beta</version>
+        <title>Microsoft VisualBasic Data science App Runtime on Windows/Linux/macOS</title>
+        <authors>xieguigang</authors>
+        <owners>xie.guigang@live.com</owners>
+        <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+        <projectUrl>https://github.com/xieguigang/VisualBasic_AppFramework</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/xieguigang/nuget-backup/master/nuget/VB_AppFramework/logo.jpg</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Source code can be download from github.com:
+https://github.com/xieguigang/VisualBasic_AppFramework
+Code style guideline for VisualBasic of this runtime library at codeproject article: http://www.codeproject.com/Articles/1101608/Code-style-guidelines-for-Microsoft-VisualBasic
+
+Article about manipulate these document at codeproject: http://www.codeproject.com/Articles/1099296/Easy-Document-in-VisualBasic</description>
+        <summary>Microsoft VisualBasic App Runtime on Windows/Linux/macOS(require .NET 4.6)
+Data science project: 
+https://github.com/xieguigang/VisualBasic_AppFramework/tree/master/Data_science/Mathematical</summary>
+        <releaseNotes>Namespace simplify: Some namespace changes a lot, feeling sorry about this.
+Csv data module change namespace to Microsoft.VisualBasic.Data.csv
+
+New feature: VisualBasic for data science:
+Add ODEs system mathematics solver
+Add a very easy used math plot system for VisualBasic, just add reference to Microsoft.VisualBasic.Mathematical.Plots.dll
+
+improvements on the SVG image type in Microsoft.VisualBasic.Imaging.dll
+improvements on the CLI markdown manual generator and additional CLI command improvements on the help system.
+
+Now this package only provides the Any CPU compiled dll, for reduce the package size</releaseNotes>
+        <copyright>GPL3</copyright>
+        <language>en-US</language>
+        <tags>VB.NET, .NET, CLI, Linux, macOS, Data Science, Network visualize</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="Microsoft.VisualBasic" targetFramework=".NETFramework4.6" />
+            <frameworkAssembly assemblyName="System.Web.Extensions" targetFramework=".NETFramework4.6" />
+            <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.6" />
+            <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework=".NETFramework4.6" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll.config" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.dll.config" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.pdb" />
+        <file src="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" target="Microsoft.VisualBasic.Architecture.Framework_v3.0_22.0.76.201__8da45dcd8060cc9a.xml" />
+        <file src="Microsoft.VisualBasic.Data.Csv.dll" target="Microsoft.VisualBasic.Data.Csv.dll" />
+        <file src="Microsoft.VisualBasic.Data.Csv.pdb" target="Microsoft.VisualBasic.Data.Csv.pdb" />
+        <file src="Microsoft.VisualBasic.Data.Csv.xml" target="Microsoft.VisualBasic.Data.Csv.xml" />
+        <file src="Microsoft.VisualBasic.Data.visualize.Network.Canvas.dll" target="Microsoft.VisualBasic.Data.visualize.Network.Canvas.dll" />
+        <file src="Microsoft.VisualBasic.Data.visualize.Network.Canvas.dll.config" target="Microsoft.VisualBasic.Data.visualize.Network.Canvas.dll.config" />
+        <file src="Microsoft.VisualBasic.Data.visualize.Network.Canvas.xml" target="Microsoft.VisualBasic.Data.visualize.Network.Canvas.xml" />
+        <file src="Microsoft.VisualBasic.Data.visualize.Network.dll" target="Microsoft.VisualBasic.Data.visualize.Network.dll" />
+        <file src="Microsoft.VisualBasic.Data.visualize.Network.pdb" target="Microsoft.VisualBasic.Data.visualize.Network.pdb" />
+        <file src="Microsoft.VisualBasic.Data.visualize.Network.xml" target="Microsoft.VisualBasic.Data.visualize.Network.xml" />
+        <file src="Microsoft.VisualBasic.DataMining.Framework.dll" target="Microsoft.VisualBasic.DataMining.Framework.dll" />
+        <file src="Microsoft.VisualBasic.DataMining.Framework.pdb" target="Microsoft.VisualBasic.DataMining.Framework.pdb" />
+        <file src="Microsoft.VisualBasic.DataMining.Framework.xml" target="Microsoft.VisualBasic.DataMining.Framework.xml" />
+        <file src="Microsoft.VisualBasic.Imaging.dll" target="Microsoft.VisualBasic.Imaging.dll" />
+        <file src="Microsoft.VisualBasic.Imaging.pdb" target="Microsoft.VisualBasic.Imaging.pdb" />
+        <file src="Microsoft.VisualBasic.Imaging.xml" target="Microsoft.VisualBasic.Imaging.xml" />
+        <file src="Microsoft.VisualBasic.Mathematical.diffEq.dll" target="Microsoft.VisualBasic.Mathematical.diffEq.dll" />
+        <file src="Microsoft.VisualBasic.Mathematical.dll" target="Microsoft.VisualBasic.Mathematical.dll" />
+        <file src="Microsoft.VisualBasic.Mathematical.dll.config" target="Microsoft.VisualBasic.Mathematical.dll.config" />
+        <file src="Microsoft.VisualBasic.Mathematical.pdb" target="Microsoft.VisualBasic.Mathematical.pdb" />
+        <file src="Microsoft.VisualBasic.Mathematical.Plots.dll" target="Microsoft.VisualBasic.Mathematical.Plots.dll" />
+        <file src="Microsoft.VisualBasic.Mathematical.xml" target="Microsoft.VisualBasic.Mathematical.xml" />
+        <file src="Microsoft.VisualBasic.MIME.Markup.dll" target="Microsoft.VisualBasic.MIME.Markup.dll" />
+        <file src="Microsoft.VisualBasic.MIME.Markup.pdb" target="Microsoft.VisualBasic.MIME.Markup.pdb" />
+        <file src="Microsoft.VisualBasic.MIME.Markup.xml" target="Microsoft.VisualBasic.MIME.Markup.xml" />
+    </files>
+</package>
