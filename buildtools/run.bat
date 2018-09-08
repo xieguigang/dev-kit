@@ -1,1 +1,0 @@
-"F:\nuget-backup\nugetIndex\bin\x64\Debug\NuGetIndex.exe" /index /source "F:\nuget-backup" /github https://github.com/xieguigang/nuget-backup
