@@ -52,9 +52,18 @@ Public Module Extensions
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
     <Extension>
     Public Function EnumerateSourceFiles(vbproj As String) As IEnumerable(Of String)
-        Return vbproj _
-            .LoadXml(Of Project) _
-            .ItemGroups _
+        Return vbproj.LoadXml(Of Project).EnumerateSourceFiles
+    End Function
+
+    ''' <summary>
+    ''' Enumerate all of the vb source files in this vbproj.
+    ''' </summary>
+    ''' <param name="vbproj"></param>
+    ''' <returns></returns>
+    <MethodImpl(MethodImplOptions.AggressiveInlining)>
+    <Extension>
+    Public Function EnumerateSourceFiles(vbproj As Project) As IEnumerable(Of String)
+        Return vbproj.ItemGroups _
             .Where(Function(items) Not items.Compiles.IsNullOrEmpty) _
             .Select(Function(items)
                         Return items.Compiles _
