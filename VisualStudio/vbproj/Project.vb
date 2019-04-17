@@ -70,7 +70,7 @@ Imports Microsoft.VisualBasic.Text
 ''' Visual Studio project XML file
 ''' </summary>
 <XmlRoot("Project", [Namespace]:=Project.xmlns)>
-Public Class Project : Implements ISaveHandle
+Public Class Project : Implements ISaveHandle, IFileReference
 
     Public Const xmlns$ = "http://schemas.microsoft.com/developer/msbuild/2003"
 
@@ -86,6 +86,12 @@ Public Class Project : Implements ISaveHandle
     Public Property ItemGroups As ItemGroup()
     <XmlElement("Target")>
     Public Property Targets As Target()
+
+    ''' <summary>
+    ''' 读取<see cref="AssemblyInfo"/>文件的时候会需要使用到这个属性
+    ''' </summary>
+    ''' <returns></returns>
+    Private Property FilePath As String Implements IFileReference.FilePath
 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
     Public Function GetProfile(condition As String) As PropertyGroup
