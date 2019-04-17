@@ -110,12 +110,12 @@ Public Class Project : Implements ISaveHandle, IFileReference
     End Function
 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
-    Public Function Save(Optional path As String = "", Optional encoding As Encoding = Nothing) As Boolean Implements ISaveHandle.Save
+    Public Function Save(path As String, encoding As Encoding) As Boolean Implements ISaveHandle.Save
         Return Me.GetXml.SaveTo(path, encoding)
     End Function
 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
-    Public Function Save(Optional path As String = "", Optional encoding As Encodings = Encodings.UTF8) As Boolean Implements ISaveHandle.Save
+    Public Function Save(path As String, Optional encoding As Encodings = Encodings.UTF8) As Boolean Implements ISaveHandle.Save
         Return Save(path, encoding.CodePage)
     End Function
 End Class
