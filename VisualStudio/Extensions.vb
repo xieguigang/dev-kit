@@ -96,4 +96,27 @@ Public Module Extensions
             End If
         End With
     End Function
+
+    <Extension>
+    Public Function GetOutputDirectory(vbproj As Project, profileName$) As String
+        Dim profile = vbproj.GetProfile(profileName)
+        Dim base$ = DirectCast(vbproj, IFileReference).FilePath.ParentPath
+        Dim outputdir = $"{base}/{profile.OutputPath}"
+
+        Return outputdir
+    End Function
+
+    ''' <summary>
+    ''' Get output assembly name
+    ''' </summary>
+    ''' <param name="vbproj"></param>
+    ''' <returns></returns>
+    <Extension>
+    Public Function GetOutputName(vbproj As Project) As String
+        Return vbproj.PropertyGroups _
+            .FirstOrDefault(Function(p)
+                                Return Not p.AssemblyName.StringEmpty
+                            End Function) _
+            .AssemblyName
+    End Function
 End Module

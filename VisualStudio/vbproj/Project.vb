@@ -95,12 +95,17 @@ Public Class Project : Implements ISaveHandle, IFileReference
 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
     Public Function GetProfile(condition As String) As PropertyGroup
+        If InStr(condition, "$(Configuration)") = 0 AndAlso InStr(condition, "$(Platform)") = 0 Then
+            condition = $"'$(Configuration)|$(Platform)' == '{condition}'"
+        Else
+            condition = condition.Trim
+        End If
+
         Return LinqAPI.DefaultFirst(Of PropertyGroup) _
  _
             () <= From x As PropertyGroup
                   In PropertyGroups
-                  Where Not x.Condition.StringEmpty AndAlso
-                      condition.TextEquals(x.Condition)
+                  Where Not x.Condition.StringEmpty AndAlso condition.TextEquals(x.Condition)
                   Select x
 
     End Function
