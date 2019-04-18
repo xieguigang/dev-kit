@@ -119,4 +119,13 @@ Public Module Extensions
                             End Function) _
             .AssemblyName
     End Function
+
+    <Extension>
+    Public Function RootNamespace(vbproj As Project) As String
+        Return vbproj.PropertyGroups _
+            .FirstOrDefault(Function(p)
+                                Return Not p.RootNamespace.StringEmpty
+                            End Function) _
+            .RootNamespace
+    End Function
 End Module
