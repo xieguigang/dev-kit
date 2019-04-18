@@ -105,7 +105,7 @@ Public Class Project : Implements ISaveHandle, IFileReference
  _
             () <= From x As PropertyGroup
                   In PropertyGroups
-                  Where Not x.Condition.StringEmpty AndAlso condition.TextEquals(x.Condition)
+                  Where Not x.Condition.StringEmpty AndAlso condition.TextEquals(x.Condition.Trim)
                   Select x
 
     End Function
