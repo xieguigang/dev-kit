@@ -43,7 +43,7 @@ Imports System.Runtime.CompilerServices
 Imports Microsoft.VisualBasic.ComponentModel
 Imports Microsoft.VisualBasic.Linq
 
-Public Module Extensions
+<HideModuleName> Public Module Extensions
 
     ''' <summary>
     ''' Enumerate all of the vb source files in this vbproj.
