@@ -7,18 +7,18 @@ Imports System.Runtime.InteropServices
 ' associated with an assembly.
 
 ' Review the values of the assembly attributes
-#if netcore5=0 then
-<Assembly: AssemblyTitle("VisualStudio tools for *.vbproj")>
+
+<Assembly: AssemblyTitle("EventLog")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("sciBASIC software foundation")>
-<Assembly: AssemblyProduct("VisualStudio")>
-<Assembly: AssemblyCopyright("Copyright © foundation@sciBASIC.net 2018")>
-<Assembly: AssemblyTrademark("Microsoft VisualBasic")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("EventLog")>
+<Assembly: AssemblyCopyright("Copyright ©  2021")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("e8870ea6-688b-497d-89c3-71aa7863c635")>
+<Assembly: Guid("e941cb1b-608a-42c6-9aed-5beb4c01fa5a")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,6 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.13.*")>
-<Assembly: AssemblyFileVersion("1.333.*")>
-#end if
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>
