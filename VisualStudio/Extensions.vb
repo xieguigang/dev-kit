@@ -102,7 +102,9 @@ Imports Microsoft.VisualBasic.Linq
     Public Function AssemblyInfo(vbproj As Project) As AssemblyInfo
         With DirectCast(vbproj, IFileReference)
             If Not .FilePath.FileExists Then
-                Return New AssemblyInfo
+                Return New AssemblyInfo With {
+                    .BuiltTime = Now
+                }
             Else
                 Return GetAssemblyInfo(.FilePath)
             End If
